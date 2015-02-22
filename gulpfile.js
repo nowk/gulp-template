@@ -1,9 +1,8 @@
 /* jshint laxcomma: true */
 
-var path       = require("path");
-var gulp       = require("gulp");
-var livereload = require("gulp-livereload");
-var sequence   = require("run-sequence");
+var path     = require("path");
+var gulp     = require("gulp");
+var sequence = require("run-sequence");
 
 /*
  * Less compile tasks
@@ -86,6 +85,8 @@ gulp.task("browserify", function(done) {
  * watch tasks
  *
  */
+
+var livereload = require("gulp-livereload");
 
 gulp.task("watch-js", function() {
   var include = path.join(_js, "**/*.js");
