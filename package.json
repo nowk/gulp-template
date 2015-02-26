@@ -1,5 +1,6 @@
 {
-  "name": "js-gulp-sample",
+  "private": true,
+  "name": "gulp-template",
   "version": "0.0.0",
   "description": "Sample gulp setup for Browserify/Less/Watch/Build",
   "main": "gulfile.js",
@@ -8,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:nowk/js-gulp-sample.git"
+    "url": "git@github.com:nowk/gulp-template.git"
   },
   "bugs": {
-    "url": "https://github.com/nowk/js-gulp-sample/issues"
+    "url": "https://github.com/nowk/gulp-template/issues"
   },
-  "homepage": "https://github.com/nowk/js-gulp-sample",
+  "homepage": "https://github.com/nowk/gulp-template",
   "author": "Yung Hwa Kwon <yung.kwon@damncarousel.com>",
   "license": "MIT",
   "devDependencies": {
