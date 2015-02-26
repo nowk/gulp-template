@@ -1,4 +1,4 @@
-# js-gulp-sample
+# gulp-template
 
 [![David DM](https://david-dm.org/nowk/gulp-template.png)](https://david-dm.org/nowk/gulp-template)
 
