@@ -1,6 +1,6 @@
 # js-gulp-sample
 
-[![David DM](https://david-dm.org/nowk/js-gulp-sample.png)](https://david-dm.org/nowk/js-gulp-sample)
+[![David DM](https://david-dm.org/nowk/gulp-template.png)](https://david-dm.org/nowk/gulp-template)
 
 A sample gulp setup for Browserify/Less/Watch/Build
 
