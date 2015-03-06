@@ -2,6 +2,7 @@
 
 var path     = require("path");
 var gulp     = require("gulp");
+var watch    = require("gulp-watch");
 var sequence = require("run-sequence");
 
 /*
@@ -92,7 +93,7 @@ gulp.task("watch-js", function() {
   var include = path.join(_js, "**/*.js");
   var ignore  = "!" + path.join(_js, "**/*_test.js");
 
-  gulp.watch([include, ignore]).on("change", function() {
+  watch([include, ignore], function() {
     sequence("browserify", livereload.reload);
   });
 });
@@ -102,10 +103,12 @@ gulp.task("watch-css", function() {
   var css  = path.join(less_, "**/*.css");
 
   // Compile less
-  gulp.watch([less], ["less"]);
+  watch([less], function() {
+    sequence("less");
+  });
 
   // Livereload without refresh
-  gulp.watch([css]).on("change", livereload.changed);
+  watch([css], livereload.changed);
 });
 
 gulp.task("watch-views", function() {
@@ -113,7 +116,7 @@ gulp.task("watch-views", function() {
   var html = path.join(__dirname, "/views/**/*.html");
   var tmpl = path.join(__dirname, "/views/**/*.tmpl");
 
-  gulp.watch([html, tmpl]).on("change", livereload.changed);
+  watch([html, tmpl], livereload.changed);
 });
 
 gulp.task("livereload", function() {
