@@ -145,8 +145,8 @@ gulp.task("watch-css", function() {
 
 gulp.task("watch-views", function() {
   // TODO change your view paths and extensions
-  var html = path.join(__dirname, "/views/**/*.html");
-  var tmpl = path.join(__dirname, "/views/**/*.tmpl");
+  var html = path.join(__dirname, "/app/views/**/*.html");
+  var tmpl = path.join(__dirname, "/app/views/**/*.tmpl");
 
   watch([html, tmpl], livereload.changed);
 });
