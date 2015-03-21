@@ -109,7 +109,10 @@ gulp.task("go-run", function() {
 });
 
 gulp.task("devs", ["go-run", "watch"], function() {
-  gulp.watch([__dirname+"/**/*.go"]).on("change", function() {
+  watch([
+    __dirname+"/**/*.go",
+    "!"+__dirname+"/**/*_test.go"
+  ], function() {
     go.restart();
   });
 });
