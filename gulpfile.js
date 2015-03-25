@@ -26,7 +26,13 @@ gulp.task("less", function() {
     plugins: [ap]
   };
 
-  return gulp.src(path.join(_less, "**/*.less"))
+  var include = path.join(_less, "**/*.less");
+  var ignore  = "!" + path.join(_less, "lib/**/*.less");
+
+  return gulp.src([
+    include,
+    ignore
+  ])
     .pipe(less(cfg))
     .pipe(minifycss({keepSpecialComments: 0}))
     .pipe(gulp.dest(less_));
