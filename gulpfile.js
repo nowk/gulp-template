@@ -4,6 +4,7 @@ var path     = require("path");
 var gulp     = require("gulp");
 var watch    = require("gulp-watch");
 var sequence = require("run-sequence");
+var argv     = require("yargs").argv;
 
 /*
  * Less compile tasks
@@ -68,6 +69,14 @@ function br(opts) {
     var main   = path.join(_js, opts.main || "index.js");
     var out    = opts.out || "bundle.js";
     var config = opts.browserify || {};
+
+    if (argv.react) {
+      if (!!!config.transform) {
+        config.transform = [];
+      }
+
+      config.transform.push(require("reactify"));
+    }
 
     browserify(main, config).bundle()
       .pipe(source(out))
