@@ -21,7 +21,7 @@
     "async": "^0.9.0",
     "browserify": "^9.0.3",
     "gulp": "^3.8.10",
-    "gulp-go": "^1.0.1",
+    "gulp-go": "^1.1.0",
     "gulp-less": "^3.0.1",
     "gulp-livereload": "^3.6.0",
     "gulp-minify-css": "^0.4.6",
